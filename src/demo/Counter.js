@@ -1,41 +1,27 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
 
 class Counter extends Component{
-
     constructor(props){
         super(props);
     }
-
     render(){
-        const {value, onIncrement , onDecrement} = this.props
-        console.log("in render ...")
-        console.log(this.props)
+        const {counter, doIncrement , doDecrement} = this.props
         return (
             <div>
                 <p>
-                    Clicked: {value.counter} times
+                    Clicked: {counter} times
                     {' '}
-                    <button onClick={onIncrement}>
+                    <button onClick={doIncrement}>
                     +
                     </button>
                     {' '}
-                    <button onClick={onDecrement}>
+                    <button onClick={doDecrement}>
                     -
-                    </button>
-                    {' '}
-                    <button >
-                    Increment if odd
-                    </button>
-                    {' '}
-                    <button >
-                    Increment async
                     </button>
                 </p>
             </div>
         )
     }
-
 }
 
-export default Counter
+export default Counter;
